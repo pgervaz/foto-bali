@@ -1,19 +1,30 @@
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
   background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  color: white;
+  text-align: center;
 }
 
-.container {
+.title {
+  margin: 20px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
   padding: 10px;
 }
 
-.photo {
-  max-width: 95vw;
-  max-height: 95vh;
+.gallery img {
+  width: 100%;
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
 }
